@@ -135,9 +135,9 @@ class _AppLockState extends State<AppLock> with WidgetsBindingObserver {
   /// on [enabled].
   void setEnabled(bool enabled, {bool reload = true}) {
     if (enabled) {
-      this.enable(reload);
+      this.enable(reload:reload);
     } else {
-      this.disable(reload);
+      this.disable(reload:reload);
     }
   }
 
