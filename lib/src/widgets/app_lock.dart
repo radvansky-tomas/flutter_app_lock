@@ -133,7 +133,7 @@ class _AppLockState extends State<AppLock> with WidgetsBindingObserver {
   ///
   /// This is a convenience method for calling the [enable] or [disable] method based
   /// on [enabled].
-  void setEnabled(bool enabled, bool reload) {
+  void setEnabled(bool enabled, {bool reload = true}) {
     if (enabled) {
       this.enable(reload);
     } else {
@@ -142,7 +142,7 @@ class _AppLockState extends State<AppLock> with WidgetsBindingObserver {
   }
 
   /// Makes sure that [AppLock] shows the [lockScreen] on subsequent app pauses.
-  void enable(bool reload) {
+  void enable({bool reload = true}) {
     if (reload)
     {
       setState(() {
@@ -156,7 +156,7 @@ class _AppLockState extends State<AppLock> with WidgetsBindingObserver {
   }
 
   /// Makes sure that [AppLock] doesn't show the [lockScreen] on subsequent app pauses.
-  void disable(bool reload) {
+  void disable({bool reload = true}) {
     if (reload)
     {
       setState(() {
